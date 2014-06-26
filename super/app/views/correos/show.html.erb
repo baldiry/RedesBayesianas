@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Remitente:</strong>
+  <%= @correo.remitente %>
+</p>
+
+<p>
+  <strong>Mensaje:</strong>
+  <%= @correo.mensaje %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @correo.departamento %>
+</p>
+
+<%= link_to 'Edit', edit_correo_path(@correo) %> |
+<%= link_to 'Back', correos_path %>

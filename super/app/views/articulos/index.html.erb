@@ -1,0 +1,50 @@
+<center>
+
+<h1>Ingresa la descripcion de tu articulo</h1>
+<br>
+<br>
+
+
+<%= form_tag({:controller => "articulos", :action => "create"}, :method => "get") do %>
+
+  
+   <%= text_field_tag "entrada", "", :size => 250, :maxlenght => 250, :placeholder => "Ingresa tu busqueda", :required => "required" %>
+   <br />
+   <%= submit_tag "Buscar" %>  
+
+
+<% end %>
+
+
+<br>
+<br>
+</center>
+<div name="respuesta" id="respuesta">
+
+ 
+<h1>Lista de Coincidencias de busqueda de : <%=@entrada%></h1>
+  
+<%=@resultado[0]%><br>
+<%=@resultado[1]%><br>
+<%=@resultado[2]%><br>
+<%=@resultado[3]%><br>
+<%=@resultado[4]%><br>
+<%=@resultado[5]%><br>
+<%=@resultado[6]%><br>
+<%=@resultado[7]%><br>
+<%=@resultado[8]%><br>
+<%=@resultado[9]%><br>
+<%=@resultado[10]%><br>
+<%=@resultado[11]%><br>
+<%=@resultado[12]%><br>
+<%=@resultado[13]%><br>
+<%=@resultado[14]%><br>
+<%=@resultado[15]%><br>
+
+      
+
+</div>
+
+
+
+

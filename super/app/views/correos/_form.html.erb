@@ -1,0 +1,25 @@
+<%= form_for(@correo) do |f| %>
+  <% if @correo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@correo.errors.count, "error") %> prohibited this correo from being saved:</h2>
+
+      <ul>
+      <% @correo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :remitente %><br>
+    <%= f.text_field :remitente %>
+  </div>
+  <div class="field">
+    <%= f.label :mensaje %><br>
+    <%= f.text_area :mensaje %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
